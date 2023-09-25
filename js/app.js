@@ -50,6 +50,7 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { 
+
     return [a+b+c, a*b*c, a+" and "+b+" and "+c+" sum to "+(a+b+c)+".", "The product of "+a+" and "+b+" and "+c+" is "+(a*b*c)+"."]
 }
 
@@ -69,17 +70,23 @@ IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 
 // Write your code here
+
+
+
 let testArray = [2, 3, 4]; //eslint-disable-line
 
-
-function sumArray(a,b,c) { 
-    return [a+b+c, a+", "+b+", "+c+", " +" was passed in as an array of numbers, "+" and "+(a+b+c)+" is their sum "+"." ]
-
+function sumArray(testArray) { 
+  
+  let emmysumArray = sum(testArray[0],testArray[1])[0];
+  let emmysumArray2 = sum(emmysumArray,testArray[2])[0];
+  
+  let string = testArray + " was passed in as an array of numbers, and " + emmysumArray2 + " is their sum.";
+  return [emmysumArray2,string]
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -94,14 +101,23 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-function multiplyArray(multArr) { //eslint-disable-line
+
+
+
+function multiplyArray(testArray) { 
+  let emmymulArray = multiply(testArray[0],testArray[1])[0];
+  let emmymulArray2 = multiply(emmymulArray,testArray[2])[0];
+  
+  let string2 = "The numbers "+testArray+" have a product of "+ emmymulArray2+".";
+  return [emmymulArray2,string2]
 
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
+
 
 // You're done! Submit the link to the repo following the instructions in Canvas. Or, try out the stretch goal below...
 
