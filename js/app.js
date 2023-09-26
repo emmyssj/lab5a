@@ -124,6 +124,7 @@ testMultiplyArray(testArray);
 // Don't forget to create a new branch for your work on the next question, if you attempt it.
 
 /////////////////////////////////////
+
 /* STRETCH GOAL: Problem 6
 Write a function called multiplyAnyArray() that takes an array of numbers of any length as its argument and returns an array whose first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and concatenates a message using the arguments that were passed into the function:
 
@@ -138,9 +139,16 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
-function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+function multiplyAnyArray(testDynamicArray) { 
+  let emmyProduct = 1;
+  let emmyString = "The numbers "+emmyProduct+" have a product of "+emmyProduct+".";
+  for (let i = 0; i < testDynamicArray.length; i++) {
+    emmyProduct += emmyProduct * testDynamicArray[i];
+    return [emmyProduct, emmyString]
+    
+    }
 
-}
+}      
 
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyAnyArray(testDynamicArray);
